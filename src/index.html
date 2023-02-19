@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Login</title>
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
+</head>
+
+<body>
+
+    <!-- Log in -->
+    <div class="modal fade" id="modalLogIn" tabindex="-1" aria-labelledby="log-in-label" style="display: none;"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="log-in-label">Login</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <form>
+                            <div class="row gap-3 ">
+                                <input type="email" class="col-12 form-control" id="inputEmail4" placeholder="Email">
+                                <input type="password" class="col-12 form-control" id="inputPassword4"
+                                    placeholder="Password">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button class="btn btn-success" data-bs-target="#modalSingUp" data-bs-toggle="modal">Sing
+                        Up</button>
+                    <button id="btn-log-in" type="button" class="btn btn-primary">Log in</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sing up -->
+    <div class="modal fade" id="modalSingUp" tabindex="-1" aria-labelledby="sing-up-label" style="display: none;"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="sing-up-label">Sign Up</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <form>
+                            <div class="row gap-3 ">
+                                <div class="row  gap-3 col-12 g-0">
+                                    <input type="text" class="col form-control" placeholder="First name"
+                                        aria-label="First name">
+                                    <input type="text" class="col form-control" placeholder="Last name"
+                                        aria-label="Last name">
+                                </div>
+                                <input type="email" class="col-12 form-control" id="inputEmail4" placeholder="Email">
+                                <input type="password" class="col-12 form-control" id="inputPassword4"
+                                    placeholder="Password">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button class="btn btn-success" data-bs-target="#modalLogIn" data-bs-toggle="modal">Log In</button>
+                    <button id="btn-sing-up" type="button" class="btn btn-primary">Sign Up</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container vh-100">
+        <div class="d-flex flex-row gap-3 justify-content-center align-items-center h-100">
+            <button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#modalLogIn"
+                data-bs-whatever="@fat">Login</button>
+            <button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#modalSingUp"
+                data-bs-whatever="@mdo">Register</button>
+        </div>
+    </div>
+
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="main.js"></script>
+
+</body>
+
+</html>
